@@ -28,52 +28,31 @@
         </ul>
       </nav>
       <footer>
-        <p class="texto-footer">&copy; 2024</p>
+        <p class="texto-footer">&copy; 2024 TSP Grupo_27</p>
       </footer>
     </aside>
     <main>
       <h2 class="titulo-principal">Carrito de Compras</h2>
       <div class="contenedor-carrito">
-        <p class="carrito-vacio">No se agregó productos al carrito</p>
+        <p id="carrito-vacio" class="carrito-vacio">No se agregó productos al carrito</p>
 
-        <div class="carrito-productos">
-
-          <div class="carrito-producto">
-            <img class="carrito-producto-imagen" src="./Assets/cafe_cultor.jpg" alt="cafe cultor">
-            <div class="carrito-producto-titulo">
-              <small>Título</small>
-              <h3>Café cultor</h3>
-            </div>
-            <div class="carrito-producto-cantidad">
-              <small>Cantidad</small>
-              <h3>1</h3>
-            </div>
-            <div class="carrito-producto-precio">
-              <small>Precio</small>
-              <h3>$40.000</h3>
-            </div>
-            <div class="carrito-producto-subtotal">
-              <small>Subtotal</small>
-              <h3>$40.000</h3>
-            </div>
-            <button class="carrito-producto-eliminar"><i class="bi bi-trash3-fill"></i></button>
-          </div>
-
+        <div id="carrito-productos" class="carrito-productos disabled">
+            <!--se completa con el JS-->
         </div>
 
-        <div class="carrito-acciones">
+        <div id="carrito-acciones" class="carrito-acciones disabled">
           <div class="carrito-acciones-izquierda">
-            <button class="carrito-acciones-vaciar">Vaciar Carrito</button>
+            <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar Carrito</button>
           </div>
           <div class="carrito-acciones-derecha">
             <div class="carrito-acciones-total">
               <p>Total:</p>
-              <p id="total">$50.000</p>
+              <p id="total"></p>
             </div>
-            <button class="carrito-acciones-comprar">Finalizar Compra</button>
+            <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Finalizar Compra</button>
           </div>
         </div>
-
+        <p id="carrito-comprado" class="carrito-comprado disabled">Gracias por tu compra, Regresa pronto! <i class="bi bi-emoji-sunglasses"></i></p>
       </div>
     </main>
   </div>

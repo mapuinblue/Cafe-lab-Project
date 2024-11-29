@@ -60,12 +60,12 @@ h1, h2, h3, h4, h5, h6, p, a, input, textarea,ul {
     gap: 1rem;
     font-weight: 600;
     padding: 1rem;
+    width: 100%;
 }
 
 .boton-menu.active {
     background-color: var(--clr-white);
     color: var(--clr-main);
-    width: 100%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     position: relative;
@@ -97,6 +97,13 @@ h1, h2, h3, h4, h5, h6, p, a, input, textarea,ul {
 
 .boton-carrito {
     margin-top: 2rem;
+}
+
+.number {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .05rem .25rem;
+    border-radius: .25rem;
 }
 
 .texto-footer {
@@ -172,9 +179,8 @@ main {
     gap: 1.5rem;
 }
 
-.carrito-vacio {
+.carrito-vacio, .carrito-comprado {
     color: var(--clr-main);
-    display: none;
 }
 
 .carrito-productos {
@@ -195,6 +201,10 @@ main {
 
 .carrito-producto-imagen {
     width: 4rem;
+    border-radius: 1rem;
+    width: 80px;
+    height: 80px; 
+    object-fit: cover;
     border-radius: 1rem;
 }
 
@@ -248,4 +258,8 @@ main {
     cursor: pointer;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+}
+
+.disabled {
+    display: none;
 }

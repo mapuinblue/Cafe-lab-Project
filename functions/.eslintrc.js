@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   root: true,
   env: {
     es6: true,
@@ -15,7 +15,7 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: ["tsconfig.json", "tsconfig.dev.json"],
-    sourceType: "module",
+    sourceType: "module", // Asegura que se use ES Modules
   },
   ignorePatterns: [
     "/lib/**/*", // Ignore built files.

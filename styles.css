@@ -263,3 +263,60 @@ main {
 .disabled {
     display: none;
 }
+/* Estilos del formulario de búsqueda avanzada */
+#form-busqueda {
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#form-busqueda select,
+#form-busqueda input {
+    padding: 0.5rem;
+    border: 1px solid var(--clr-mainlight);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--clr-main);
+    background-color: var(--clr-white);
+}
+
+#form-busqueda select:focus,
+#form-busqueda input:focus {
+    outline: 2px solid var(--clr-mainlight);
+}
+
+#form-busqueda button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--clr-mainlight);
+    color: var(--clr-white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#form-busqueda button:hover {
+    background-color: var(--clr-main);
+    transform: scale(1.05);
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    aside {
+        padding: 1rem;
+    }
+
+    .contenedor-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #form-busqueda {
+        grid-template-columns: 1fr;
+    }
+}
+
+

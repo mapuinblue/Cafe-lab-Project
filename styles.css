@@ -304,7 +304,6 @@ main {
     background-color: var(--clr-main);
     transform: scale(1.05);
 }
-
 /* Estilos responsivos */
 @media (max-width: 768px) {
     aside {
@@ -319,4 +318,5 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
 

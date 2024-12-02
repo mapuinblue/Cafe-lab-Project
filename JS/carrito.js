@@ -113,52 +113,52 @@ botonComprar.addEventListener("click", () => {
 
 // Búsqueda avanzada
 formularioBusqueda.addEventListener("submit", (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const regionSeleccionada = campoRegion.value;
-    const precioMin = parseFloat(campoPrecioMin.value) || 0;
-    const precioMax = parseFloat(campoPrecioMax.value) || Infinity;
-    const tipoSeleccionado = campoTipoCafe.value;
+  const regionSeleccionada = campoRegion.value;
+  const precioMin = parseFloat(campoPrecioMin.value) || 0;
+  const precioMax = parseFloat(campoPrecioMax.value) || Infinity;
+  const tipoSeleccionado = campoTipoCafe.value;
 
-    const productosFiltrados = productosEnCarrito.filter(producto => {
-        const cumpleRegion = regionSeleccionada === "todos" || producto.region === regionSeleccionada;
-        const cumplePrecio = producto.precio >= precioMin && producto.precio <= precioMax;
-        const cumpleTipo = tipoSeleccionado === "todos" || producto.tipo === tipoSeleccionado;
+  const productosFiltrados = productosEnCarrito.filter(producto => {
+      const cumpleRegion = regionSeleccionada === "todos" || producto.region === regionSeleccionada;
+      const cumplePrecio = producto.precio >= precioMin && producto.precio <= precioMax;
+      const cumpleTipo = tipoSeleccionado === "todos" || producto.tipo === tipoSeleccionado;
 
-        return cumpleRegion && cumplePrecio && cumpleTipo;
-    });
+      return cumpleRegion && cumplePrecio && cumpleTipo;
+  });
 
-    if (productosFiltrados.length > 0) {
-        contenedorCarritoProductos.innerHTML = "";
+  if (productosFiltrados.length > 0) {
+      contenedorCarritoProductos.innerHTML = "";
 
-        productosFiltrados.forEach(producto => {
-            const div = document.createElement("div");
-            div.classList.add("carrito-producto");
-            div.innerHTML = `
-                <img class="carrito-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
-                <div class="carrito-producto-titulo">
-                  <small>Título</small>
-                  <h3>${producto.titulo}</h3>
-                </div>
-                <div class="carrito-producto-cantidad">
-                  <small>Cantidad</small>
-                  <h3>${producto.cantidad}</h3>
-                </div>
-                <div class="carrito-producto-precio">
-                  <small>Precio</small>
-                  <h3>$${producto.precio}</h3>
-                </div>
-                <div class="carrito-producto-subtotal">
-                  <small>Subtotal</small>
-                  <h3>$${producto.precio * producto.cantidad}.000</h3>
-                </div>
-                <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash3-fill"></i></button>
-            `;
-            contenedorCarritoProductos.append(div);
-        });
+      productosFiltrados.forEach(producto => {
+          const div = document.createElement("div");
+          div.classList.add("carrito-producto");
+          div.innerHTML = `
+              <img class="carrito-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+              <div class="carrito-producto-titulo">
+                <small>Título</small>
+                <h3>${producto.titulo}</h3>
+              </div>
+              <div class="carrito-producto-cantidad">
+                <small>Cantidad</small>
+                <h3>${producto.cantidad}</h3>
+              </div>
+              <div class="carrito-producto-precio">
+                <small>Precio</small>
+                <h3>$${producto.precio}</h3>
+              </div>
+              <div class="carrito-producto-subtotal">
+                <small>Subtotal</small>
+                <h3>$${producto.precio * producto.cantidad}.000</h3>
+              </div>
+              <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash3-fill"></i></button>
+          `;
+          contenedorCarritoProductos.append(div);
+      });
 
-        actualizarBotonesEliminar(); // Actualiza botones de eliminar
-    } else {
-        contenedorCarritoProductos.innerHTML = "<p>No se encontraron productos que coincidan con los criterios de búsqueda.</p>";
-    }
+      actualizarBotonesEliminar(); // Actualiza botones de eliminar
+  } else {
+      contenedorCarritoProductos.innerHTML = "<p>No se encontraron productos que coincidan con los criterios de búsqueda.</p>";
+  }
 });

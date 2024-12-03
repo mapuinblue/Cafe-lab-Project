@@ -28,7 +28,7 @@ const productos = [
           nombre: "Café de Antioquia",
           id: "antioquia"
       },
-      precio: "45.000"
+      precio: "35.000"
   },
   {
       id: "cafe-divisas",
@@ -38,7 +38,7 @@ const productos = [
           nombre: "Café de Antioquia",
           id: "antioquia"
       },
-      precio: "45.000"
+      precio: "25.000"
   },
   {
       id: "cafe-3caminos",
@@ -48,7 +48,7 @@ const productos = [
           nombre: "Café de Antioquia",
           id: "antioquia"
       },
-      precio: "45.000"
+      precio: "15.000"
   },
   {
       id: "cafe-dulcearmonia",
@@ -68,7 +68,7 @@ const productos = [
           nombre: "Café de Antioquia",
           id: "antioquia"
       },
-      precio: "45.000"
+      precio: "25.000"
   },
   {
       id: "cafe-savalo",
@@ -78,7 +78,7 @@ const productos = [
           nombre: "Café de Antioquia",
           id: "antioquia"
       },
-      precio: "40.000"
+      precio: "22.000"
   },
   {
       id: "cafe-tostao",
@@ -88,7 +88,7 @@ const productos = [
           nombre: "Café de Antioquia",
           id: "antioquia"
       },
-      precio: "45.000"
+      precio: "37.000"
   },
   {
       id: "cafe-venecia",
@@ -118,7 +118,7 @@ const productos = [
           nombre: "Café de Quindio",
           id: "quindio"
       },
-      precio: "40.000"
+      precio: "50.000"
   },
   {
       id: "cafe-quindio",
@@ -128,7 +128,7 @@ const productos = [
           nombre: "Café de Quindio",
           id: "quindio"
       },
-      precio: "40.000"
+      precio: "34.000"
   },
   {
       id: "cafe-vereda",
@@ -168,7 +168,7 @@ const productos = [
           nombre: "Café de Nariño",
           id: "narino"
       },
-      precio: "40.000"
+      precio: "20.000"
   },
   {
       id: "cafe-excelso",
@@ -178,7 +178,7 @@ const productos = [
           nombre: "Café de Nariño",
           id: "narino"
       },
-      precio: "45.000"
+      precio: "55.000"
   },
   {
       id: "cafe-obraje",
@@ -188,7 +188,7 @@ const productos = [
           nombre: "Café de Nariño",
           id: "narino"
       },
-      precio: "45.000"
+      precio: "25.000"
   },
   {
       id: "cafe-dulcearmonia",
@@ -198,7 +198,7 @@ const productos = [
           nombre: "Café de Nariño",
           id: "narino"
       },
-      precio: "40.000"
+      precio: "19.000"
   }
 ];
 

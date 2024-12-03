@@ -305,3 +305,31 @@ function actualizarNumerito() {
   //esta función es un acumulador para que el contador del numerito al lado del boton carrito
   //se aumente a medida que damos click
 }
+
+// Seleccionar el formulario de búsqueda avanzada
+const formBusqueda = document.querySelector("#form-busqueda");
+
+// Interceptar el evento submit
+formBusqueda.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevenir el comportamiento por defecto
+
+  // Obtener los valores de los campos del formulario
+  const region = document.querySelector("#region").value;
+  const precioMin = parseInt(document.querySelector("#precio-min").value) || 0;
+  const precioMax = parseInt(document.querySelector("#precio-max").value) || Infinity;
+  const tipoCafe = document.querySelector("#tipo-cafe").value;
+
+  // Filtrar los productos según los criterios de búsqueda
+  const productosFiltrados = productos.filter((producto) => {
+    const precioNumerico = parseInt(producto.precio.replace(/\./g, ""));
+    return (
+      (region === "todos" || producto.categoria.id === region) &&
+      precioNumerico >= precioMin &&
+      precioNumerico <= precioMax &&
+      (tipoCafe === "todos" || producto.tipo === tipoCafe)
+    );
+  });
+
+  // Cargar los productos filtrados en el contenedor
+  cargarProductos(productosFiltrados);
+});
